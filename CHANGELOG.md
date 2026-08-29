@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2.4.7 (2026-08-29)
+
+* Fixed [a longstanding issue][issue-406] on Windows where Alda player processes
+  were unintentionally coupled to the terminal that started them. The behavior
+  on Windows now matches the Unix/Linux behavior, where, after running an `alda
+  play` command and closing the terminal, playback continues until you run `alda
+  stop` or `alda shutdown`.
+
+  Thanks to [userjuma] for the fix!
+
 ## 2.4.6 (2026-08-19)
 
 * Re-adds the `alda-code` Lisp function from Alda 1.x that takes a string and
@@ -548,6 +558,7 @@ the [Alda 2 migration guide][migration-guide]!
 [midi-channel-attribute]: ./doc/attributes.md#midi-channel
 [issue-401]: https://github.com/alda-lang/alda/issues/401
 [issue-405]: https://github.com/alda-lang/alda/issues/405
+[issue-406]: https://github.com/alda-lang/alda/issues/406
 [issue-415]: https://github.com/alda-lang/alda/issues/415
 [issue-416]: https://github.com/alda-lang/alda/issues/416
 [issue-417]: https://github.com/alda-lang/alda/issues/417
